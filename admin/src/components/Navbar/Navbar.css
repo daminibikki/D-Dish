@@ -1,0 +1,23 @@
+.head{
+    color: tomato;
+    
+}
+.subtitle{
+    color: black;
+    margin: 0;
+    opacity: 0.8;
+    display: block;   /* forces it under the title */
+    font-size: 16px;  /* optional but looks cleaner */
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4%;
+}
+.profile{
+   width: 50px;      /* keep width & height equal */
+   height: 50px;
+   border-radius: 60%;  
+   object-fit: cover;
+}
