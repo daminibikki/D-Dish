@@ -9,11 +9,20 @@ import orderRouter from "./routes/orderRoute.js"
 
 // app config
 const app = express()
-const port = 4000
+const port = process.env.PORT || 4000
 
 // middleware here will initialize middleware
 app.use(express.json())
-app.use(cors())
+const allowedOrigins = [
+    "http://localhost:5173",
+    "https://your-frontend.vercel.app"
+];
+
+app.use(cors({
+    origin: allowedOrigins,
+    credentials: true
+}));
+
 
 
 // db connection
@@ -33,5 +42,5 @@ app.get("/",(req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log(`server started on http://localhost:${port}`)
+    console.log(`server running on ${port}`)
 })
