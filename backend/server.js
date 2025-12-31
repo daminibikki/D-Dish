@@ -15,7 +15,7 @@ const port = process.env.PORT || 4000
 app.use(express.json())
 const allowedOrigins = [
     "http://localhost:5173",
-    "https://d-dish-frontend.vercel.app"
+    "https://d-dish-frontend-4el0l8tzw-lasyas-projects-d20d0d12.vercel.app/"
 ];
 
 app.use(cors({
