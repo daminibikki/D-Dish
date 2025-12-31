@@ -33,7 +33,7 @@ app.use(cors({
     allowedHeaders: ["Content-Type", "Authorization", "token"]
 }));
 
-app.options("*", cors());
+app.options("/*", cors());
 
 // db connection
 connectDB();
